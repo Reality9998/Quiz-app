@@ -16,6 +16,7 @@
 
 body {
   margin: 0px;
+  
 }
 
 .register{
@@ -298,4 +299,55 @@ body {
   justify-content: space-between;
   height: 40px;
   align-items: center;
+}
+
+
+@media(max-width:900px){
+  .quizbody{
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .leftbody{
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+
+  .leftbody p{
+    font-size: 20px;
+    font-weight: normal;
+    line-height:0.7cm;
+  }
+
+  .rightbody{
+    width: 100%;
+    height: auto;
+  }
+
+  .rightbody button{
+    width: 70%;
+  }
+
+  .timeseconds{
+    width: 60%;
+  }
+
+  .detailsrow{
+    width: 90%;
+  }
+}
+
+@media(max-width:500px){
+  .inboxright{
+    width: 95%;
+  }
+
+  .rightbody button{
+    width: 80%;
+  }
+
+  .timeseconds{
+    width: 80%;
+  }
 }
