@@ -1,0 +1,301 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0px;
+}
+
+.register{
+  background:rgb(250,200,200);
+  width:100%;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.myform{
+  width: 60%;
+  height:500px;
+  border:20px solid rgb(250, 100, 150);
+  border-radius:400px;
+  overflow: hidden;
+}
+
+.formtitle{
+  width: 100%;
+  height: 100px;
+  background: rgb(250, 100, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: 0px 0px 4px white;
+}
+
+.inputrow{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px;
+}
+
+.inputrow label{
+  font-weight: bold;
+  color: rgb(200, 150, 0);
+  font-size: 30px;
+}
+
+.inputrow input{
+  background: none;
+  border:none;
+  outline: none;
+}
+
+
+.quizbody{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: teal;
+}
+
+.leftbody{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftbody p{
+  width: 80%;
+  line-height: 2cm;
+  color: #f8f8f8;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.rightbody{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inboxright{
+  width: 80%;
+  height: 500px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #232323;
+}
+
+.inboxright .divrow{
+  width: 90%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.inboxright h1{
+  width: 90%;
+  font-size: 25px;
+}
+
+.inboxright p{
+  width: 90%;
+  margin: 0px;
+}
+
+.inboxright h2{
+  font-weight: normal;
+  margin-top: 50px;
+}
+
+.inboxright button{
+  width: 50%;
+  height: 50px;
+  background: teal;
+  font-weight: bold;
+  color: #f8f8f8;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid teal;
+}
+
+.inboxright button:hover{
+  background: #f8f8f8;
+  color: teal;
+  cursor: pointer;
+}
+
+.timeseconds{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeseconds span{
+  font-size: 14px;
+}
+
+.seconds{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+}
+
+.seconds b{
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  padding: 8px;
+  background: rgb(200, 250, 200);
+  color: green;
+  margin-top: 10px;
+}
+
+.menuback{
+  display: flex;
+  width: 90%;
+  flex-direction: row !important;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+ 
+}
+
+.menuback h2{
+  margin: 0px;
+}
+
+.quizroom{
+  width: 90%;
+  height: 430px;
+  
+}
+
+.gameover{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameover h3{
+  margin-top: 50px;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.gameover p{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.totalscore{
+  font-size: 30px;
+}
+
+.grade{
+  font-size: 15px;
+  color: rgb(0, 100, 200);
+  font-weight: bold;
+}
+
+.gameplays{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.myquestion{
+  width: 80%;
+  font-size: 40px;
+  font-weight: bold;
+  color: teal;
+  text-shadow: 0px 0px 4px white;
+  border: 8px solid teal;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.myanswer{
+  width: 70%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  border:10px solid teal;
+  border-radius: 100px;
+  margin-top: 30px;
+
+}
+
+.myanswer input{
+  background: none;
+  outline: none;
+  border:none;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: teal;
+}
+
+.myanswer input::placeholder{
+  color: #474747;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.timeleft{
+  margin-top: 10px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeleft span{
+  font-size: 50px;
+}
+
+.detailsrow{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
