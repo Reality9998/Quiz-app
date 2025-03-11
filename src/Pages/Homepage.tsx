@@ -127,8 +127,10 @@ function Homepage({duration}:{duration:number}) {
                             onChange={(e) => setValue(e.target.value)}
                         />
                     </div>
-                    <div className="timeleft">Time left: 
-                        <span>{timeLeft}</span></div>
+                    <div className="timeleft">
+                    <span>{timeLeft}</span>
+                        Time left 
+                        </div>
                 </div>
             )}
         </div>
