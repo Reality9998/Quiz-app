@@ -1,3 +1,4 @@
+import { ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
 
 
@@ -12,7 +13,7 @@ const questions: Question[] = [];
     let sign=["+","-"];
     let sign1=["+","-","*"];
     
-    for(let y=0;y<5;y++){
+    for(let y=0;y<10;y++){
         if(Math.floor(Math.random()*2)==0){
         let srand=Math.floor(Math.random()*3);
         let srand1=Math.floor(Math.random()*3);
@@ -47,7 +48,14 @@ function Homepage({duration}:{duration:number}) {
     const [score, setScore] = useState(0);
     const [value, setValue] = useState(""); // Track user input
     const [gameOver, setGameOver] = useState(false); // Track game status
-
+    const clickme=(vals: string) =>{
+        if(vals=="x"){
+            setValue("");
+        }
+        else{
+        setValue((prev) => prev + vals);
+        }
+      }
     useEffect(() => {
         if (gameOver) return; // Stop the timer when the game is over
 
@@ -75,6 +83,11 @@ function Homepage({duration}:{duration:number}) {
     }, [timeLeft]);
     
 
+    
+  
+    // const clears=() => {
+    //   setVal("");
+    // }
 
     return (
         <div className="realquiz">
@@ -120,7 +133,15 @@ function Homepage({duration}:{duration:number}) {
                 <div className="gameplays">
                     <div className="myquestion">{questions[currentQuestionIndex].quest}</div>
                     <div className="myanswer">
-                        <input
+                        <input className="laptop"
+                            value={value}
+                            type="text"
+                            placeholder="Your answer..."
+                            onChange={(e) => setValue(e.target.value)}
+                        />
+
+                    <input className="mobile"
+                            readOnly
                             value={value}
                             type="text"
                             placeholder="Your answer..."
@@ -131,7 +152,27 @@ function Homepage({duration}:{duration:number}) {
                     <span>{timeLeft}</span>
                         Time left 
                         </div>
+
+                        <div className="keyboard">
+                            <div className="keyboardiv">
+                                <button onClick={() => clickme("1")}>1</button>
+                                <button onClick={() => clickme("2")}>2</button>
+                                <button onClick={() => clickme("3")}>3</button>
+                                <button onClick={() => clickme("4")}>4</button>
+                                <button onClick={() => clickme("5")}>5</button>
+                                <button onClick={() => clickme("6")}>6</button>
+                                <button onClick={() => clickme("7")}>7</button>
+                                <button onClick={() => clickme("8")}>8</button>
+                                <button onClick={() => clickme("9")}>9</button>
+                                <button onClick={() => clickme("x")}><ArrowLeft /></button>
+                                <button onClick={() => clickme("0   ")}>0</button>
+                                <button onClick={() => clickme("-")}>-</button>
+                                
+                            </div>
+                        </div>
                 </div>
+
+                
             )}
         </div>
     );

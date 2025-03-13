@@ -98,6 +98,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   
 }
 
@@ -301,10 +302,23 @@ body {
   align-items: center;
 }
 
+.keyboard{
+  display: none;
+}
+
+.mobile{
+  display: none;
+}
 
 @media(max-width:900px){
+  .mobile{
+    display: inline;
+  }
+  .laptop{
+    display: none;
+  }
   .quizbody{
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100vh;
   }
 
@@ -312,6 +326,7 @@ body {
     width: 100%;
     text-align: center;
     height: auto;
+    display: none;
   }
 
   .leftbody p{
@@ -322,7 +337,7 @@ body {
 
   .rightbody{
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .rightbody button{
@@ -336,11 +351,56 @@ body {
   .detailsrow{
     width: 90%;
   }
+  .inboxright{
+    width: 95%;
+    height: 90vh;
+  }
+
+  .myquestion{
+    font-size: 30px;
+    height: auto;
+    width: auto;
+    padding: 10px;
+  }
+
+  .myanswer{
+    height: 50px;
+  }
+  .myanswer input{
+    font-size: 20px;
+    height: 100%;
+  }
+
+  .timeleft span{
+    font-size: 24px;
+  }
+
+  .keyboard{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .keyboardiv{
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+
+  }
+
+  .keyboardiv button{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+
+  }
 }
 
 @media(max-width:500px){
+  
   .inboxright{
-    width: 95%;
+    height: 100vh;
   }
 
   .rightbody button{
