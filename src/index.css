@@ -306,9 +306,45 @@ body {
   display: none;
 }
 
+.keyboard2{
+  display: none;
+}
+
 .mobile{
   display: none;
 }
+
+.myquestion2{
+  font-size:20px;
+  font-weight: bold;
+  text-align:center;
+
+}
+
+.myanswer2{
+  background: none;
+  border:none;
+  outline: none;
+  border:1px solid #999;
+  height: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myanswer2 input{
+  width: 90%;
+  height: 90%;
+  border:none;
+  outline: none;
+  background: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+
 
 @media(max-width:900px){
   .mobile{
@@ -375,6 +411,10 @@ body {
     font-size: 24px;
   }
 
+  .keyboard2{
+    display:flex;
+  }
+
   .keyboard{
     display: flex;
     width: 100%;
@@ -395,11 +435,40 @@ body {
     border-radius: 100px;
 
   }
+
+
+.keyboardiv2{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.keyboardiv2 button{
+  height: 40px;
+  width: 9%;
+  color: black;
+  background-color: #ccc;
+  border: 2px;
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.spaces{
+  width:60% !important;
+}
 }
 
 @media(max-width:500px){
   
   .inboxright{
+    
     height: 100vh;
   }
 
@@ -410,4 +479,35 @@ body {
   .timeseconds{
     width: 80%;
   }
+
+  .keyboardiv2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  
+    justify-content: center;
+  }
+  
+  .keyboardiv2 button{
+    height: 30px;
+    width: 9%;
+    color: black;
+    background-color: #ccc;
+    border: 2px;
+    display: flex;
+    align-items: center;
+    margin-left: 1px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+  
+  }
+  
+  .spaces{
+    width:60% !important;
+  }
+
+  
+  
+  
 }

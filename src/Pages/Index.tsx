@@ -1,12 +1,14 @@
 import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import Homepage from "./Homepage";
+import Trival from "./Trival";
 
 function Index() {
     const restart = () => window.location.reload();
-    
+
     const [category, setCategory] = useState<string>("");
     const [game, setGame] = useState<string>("menu");
+    const [duration, setDuration] = useState<number | null>(null);
 
     // Duration mapping
     const durations: Record<string, number> = {
@@ -35,10 +37,16 @@ function Index() {
 
                             {category === "trivia" && (
                                 <div className="timeseconds">
+                                    <span>Total Questions: 20</span>
                                     <span>Set Duration</span>
                                     <div className="seconds">
-                                        {Object.values(durations).map((sec) => (
-                                            <b key={sec}>{sec} Seconds</b>
+                                        {Object.entries(durations).map(([key, sec]) => (
+                                            <b key={key} onClick={() => {
+                                                setGame("trivia");
+                                                setDuration(sec);
+                                            }}>
+                                                {sec} Seconds
+                                            </b>
                                         ))}
                                     </div>
                                 </div>
@@ -48,10 +56,14 @@ function Index() {
 
                             {category === "maths" && (
                                 <div className="timeseconds">
+                                    <span>Total Questions: 10</span>
                                     <span>Set Duration</span>
                                     <div className="seconds">
                                         {Object.entries(durations).map(([key, sec]) => (
-                                            <b key={key} onClick={() => setGame(key)}>
+                                            <b key={key} onClick={() => {
+                                                setGame(key);
+                                                setDuration(sec);
+                                            }}>
                                                 {sec} Seconds
                                             </b>
                                         ))}
@@ -71,6 +83,19 @@ function Index() {
 
                             <div className="quizroom">
                                 <Homepage duration={durations[game]} />
+                            </div>
+                        </>
+                    )}
+
+                    {game === "trivia" && duration !== null && (
+                        <>
+                            <div className="menuback">
+                                <i onClick={restart}><ArrowLeft /></i>
+                                <h2>Quiz Time</h2>
+                            </div>
+
+                            <div className="quizroom">
+                                <Trival duration={duration} />
                             </div>
                         </>
                     )}
